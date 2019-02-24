@@ -1,0 +1,115 @@
+/* requirements: 10 active custom styling rules that modify template or boot strap theme */
+
+
+
+
+h1 {
+    font-family: 'Major Mono Display', monospace;
+
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: rgb(223, 222, 222);
+    background-image: linear-gradient(to right, #ff8484, #35234b);
+
+
+}
+
+.techfont {
+    font-family: 'Monoton', cursive;
+    font-size: 200%;
+
+
+}
+
+.interests {
+    background: repeating-linear-gradient(-55deg,
+        #222,
+        #222 10px,
+        #333 10px,
+        #333 20px);
+    text-align: center;
+    color: aliceblue;
+    font-size: 150%;
+    font-style: italic;
+    font-family: 'Bad Script', cursive;
+}
+
+.aboutinterests {
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+}
+
+.dent {
+    color: #2c4762;
+}
+
+.jumbotron {
+    background-color: rgb(204, 200, 208);
+}
+
+/* Font Awesome CS */
+.fa {
+    padding: 10pt;
+    font-size: 20pt;
+    width: 40pt;
+    text-align: auto;
+    text-decoration: none;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+.fa-tumblr {
+    background: #2c4762;
+    color: white;
+}
+
+.fa-soundcloud {
+    background: #ff5500;
+    color: white;
+
+}
+
+.fa-github {
+    background: rgb(34, 34, 34);
+    color: white;
+}
