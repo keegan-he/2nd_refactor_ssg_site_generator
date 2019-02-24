@@ -1,5 +1,5 @@
 import glob
-all_html_files = glob.glob("content/*.html")
+all_html_files = glob.glob("*/*.html")
 print(all_html_files)
 
 # TEMPLATE = template = open("templates/base.html").read()
@@ -10,32 +10,26 @@ PAGES = [
     {
         "filename": "content/index.html",
         "output": "docs/index.html",
-        "title": "Home",
     },
     {
         "filename": "content/about.html",
         "output": "docs/about.html",
-        "title": "About Me",
     },
     {
         "filename": "content/contact.html",
         "output": "docs/contact.html",
-        "title": "Contact",
     },
     {
         "filename": "content/music.html",
         "output": "docs/music.html",
-        "title": "Music",
     },
     {
         "filename": "content/photography.html",
         "output": "docs/photography.html",
-        "title": "Photography",
     },
     {
         "filename": "content/projects.html",
         "output": "docs/projects.html",
-        "title": "Projects",
     },
 ]
 
