@@ -1,3 +1,6 @@
+import glob
+all_html_files = glob.glob("content/*.html")
+print(all_html_files)
 
 # TEMPLATE = template = open("templates/base.html").read()
 with open("templates/base.html", "r") as file:
