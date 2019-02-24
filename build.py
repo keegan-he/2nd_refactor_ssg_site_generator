@@ -1,6 +1,15 @@
 import glob
+import os
+
+file_path = "content/about.html"
+file_name = os.path.basename(file_path)
+print(file_name)
+name_only, extension = os.path.splitext(file_name)
+print(name_only)
+
+#read in all HTML files
 all_html_files = glob.glob("*/*.html")
-print(all_html_files)
+#print(all_html_files)
 
 # TEMPLATE = template = open("templates/base.html").read()
 with open("templates/base.html", "r") as file:
