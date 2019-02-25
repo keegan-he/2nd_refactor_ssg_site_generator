@@ -17,32 +17,13 @@ print(docs_content)
 with open("templates/base.html", "r") as file:
     TEMPLATE = file.read()
 
-PAGES = [
-    {
-        "filename": "content/index.html",
-        "output": "docs/index.html",
-    },
-    {
-        "filename": "content/about.html",
-        "output": "docs/about.html",
-    },
-    {
-        "filename": "content/contact.html",
-        "output": "docs/contact.html",
-    },
-    {
-        "filename": "content/music.html",
-        "output": "docs/music.html",
-    },
-    {
-        "filename": "content/photography.html",
-        "output": "docs/photography.html",
-    },
-    {
-        "filename": "content/projects.html",
-        "output": "docs/projects.html",
-    },
-]
+PAGES = []
+
+def generate_list():
+    content_html_files = glob.glob("content/*.html")
+    docs_html_files = glob.glob("docs/*.html")
+    docs_content = content_html_files + docs_html_files
+    print(docs_content)
 
 def read_content(filename):
     return open(filename).read()
