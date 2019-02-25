@@ -1,29 +1,29 @@
 import glob
 import os
 
-# file_path = "content/about.html"
-# file_name = os.path.basename(file_path)
-# print(file_name)
-# name_only, extension = os.path.splitext(file_name)
-# print(name_only)
-
-#read in all HTML files
+"""read in all HTML files"""
 content_html_files = glob.glob("content/*.html")
-docs_html_files = glob.glob("docs/*.html")
-docs_content = content_html_files + docs_html_files
-print(docs_content)
+print(content_html_files)
+
+""""""
+file_path = "content/about.html"
+file_name = os.path.basename(file_path)
+print(file_name)
+name_only, extension = os.path.splitext(file_name)
+print(name_only)
 
 # TEMPLATE = template = open("templates/base.html").read()
 with open("templates/base.html", "r") as file:
     TEMPLATE = file.read()
 
 PAGES = []
+PAGES.append({
+    "filename": content_html_files,
+    "title": file_name,
+    "output": "docs/index.html",
+})
+print(PAGES)
 
-def generate_list():
-    content_html_files = glob.glob("content/*.html")
-    docs_html_files = glob.glob("docs/*.html")
-    docs_content = content_html_files + docs_html_files
-    print(docs_content)
 
 def read_content(filename):
     return open(filename).read()
