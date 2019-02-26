@@ -5,23 +5,25 @@ import os
 content_html_files = glob.glob("content/*.html")
 print(content_html_files)
 
-""""""
-file_path = "content/about.html"
-file_name = os.path.basename(file_path)
-print(file_name)
-name_only, extension = os.path.splitext(file_name)
-print(name_only)
-
-# TEMPLATE = template = open("templates/base.html").read()
-with open("templates/base.html", "r") as file:
-    TEMPLATE = file.read()
-
 PAGES = []
-PAGES.append({
-    "filename": content_html_files,
-    "title": file_name,
-    "output": "docs/index.html",
-})
+
+for file_path in content_html_files:
+    file_name = os.path.basename(file_path)
+    print(file_name)
+    name_only, extension = os.path.splitext(file_name)
+    print(name_only)
+
+    # TEMPLATE = template = open("templates/base.html").read()
+    with open("templates/base.html", "r") as file:
+        TEMPLATE = file.read()
+
+    PAGES.append({
+        "filename": file_path,
+        "title": file_name,
+        "output": "docs/index.html",
+    })
+
+
 print(PAGES)
 
 
