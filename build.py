@@ -1,5 +1,6 @@
 import glob
 import os
+from jinja2 import Template
 
 def build_pages():
         
@@ -30,14 +31,15 @@ def read_content(filename):
     return open(filename).read()
 
 
-def apply_template(a_string):
+def apply_template(filename, title):
     """ read template file and combine with content  """
-
-    # TEMPLATE = template = open("templates/base.html").read()
-    with open("templates/base.html", "r") as file:
-        TEMPLATE = file.read()
-    return TEMPLATE.replace("{{content}}", a_string)  # string replacing
-
+    index_html = open(filename).read()
+    template_html = open("templates/base.html").read()
+    template = Template(template_html)
+    return template.render(
+        title=title,
+        content=index_html,
+    )
 
 def write_content(content, output_filename):
     """ loop through pages and write content to output files """
@@ -48,8 +50,7 @@ def write_content(content, output_filename):
 def main():
     """ invoke write content function """
     for page in build_pages():
-        content = read_content(page["filename"])
-        templated_content = apply_template(content)
+        templated_content = apply_template(page["filename"], page["title"])
         write_content(templated_content, page["output"])
 
 
