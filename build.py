@@ -26,6 +26,7 @@ def build_pages():
 
 
 def read_content(filename):
+    '''read content in'''
     return open(filename).read()
 
 
