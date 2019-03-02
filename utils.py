@@ -3,7 +3,6 @@ import os
 from jinja2 import Template
 
 def build_pages():
-        
     """read in all HTML files"""
     content_html_files = glob.glob("content/*.html")
     print(content_html_files)
@@ -14,7 +13,6 @@ def build_pages():
         file_name = os.path.basename(file_path)
         name_only, extension = os.path.splitext(file_name)
 
-
         PAGES.append({
             "filename": file_path,
             "title": name_only.title(),
@@ -24,11 +22,9 @@ def build_pages():
     print(PAGES)
     return PAGES
 
-
 def read_content(filename):
     '''read content in'''
     return open(filename).read()
-
 
 def apply_template(filename, title, pages):
     """ read template file and combine with content  """
@@ -46,14 +42,12 @@ def write_content(content, output_filename):
     with open("docs/{}".format(output_filename), "w") as outfile:
         outfile.write(content)
 
-
 def main():
     """ invoke write content function """
     pages = build_pages()
     for page in pages:
         templated_content = apply_template(page["filename"], page["title"], pages)
         write_content(templated_content, page["output"])
-
 
 if __name__ == "__main__":
     main()
