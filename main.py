@@ -13,8 +13,6 @@ elif command == "new":
     import utils
     utils.main()
     utils.build_pages()
-    utils.apply_template()
-    utils.write()
 
 else:
     print("Please specify ’build’ or ’new’")
