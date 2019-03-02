@@ -5,7 +5,7 @@ from jinja2 import Template
 def build_pages():
     """read in all HTML files"""
     content_html_files = glob.glob("content/*.html")
-    print(content_html_files)
+    #print(content_html_files)
 
     PAGES = []
 
@@ -19,7 +19,7 @@ def build_pages():
             "output": file_name,
         })
 
-    print(PAGES)
+    #print(PAGES)
     return PAGES
 
 def read_content(filename):

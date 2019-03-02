@@ -5,10 +5,16 @@ command = sys.argv[1]
 print(command)
 if command == "build":
     print("Build was specified")
-# TODO: Do something here... elif command == "new":
     import utils
     utils.build_pages()
-    
+
+elif command == "new":
     print("New page was specified")
-# TODO: Do something here... else:
+    import utils
+    utils.main()
+    utils.build_pages()
+    utils.apply_template()
+    utils.write()
+
+else:
     print("Please specify ’build’ or ’new’")
